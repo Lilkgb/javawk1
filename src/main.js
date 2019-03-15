@@ -10,11 +10,17 @@ import {jupiter} from './../src/backEnd.js';
 $(document).ready(function() {
   $(".form").submit(function(event) {
     event.preventDefault();
-    let month = 'may';
-    let day = 31;
-    let year = 1995;
+    $(".info").text('');
+    let month = $("#month").val();
+    let day = $("#day").val();
+    let year = $("#year").val();
     let newDate = dateString(month,day,year);
-    let age = getAge(newDate);
-    console.log(age);
+    const earthAge = getAge(newDate);
+    const mercuryAge = mercury(earthAge);
+    const venusAge = venus(earthAge);
+    const marsAge = mars(earthAge);
+    const jupiterAge = jupiter(earthAge);
+    $(".info").append("<p> Your earth age is " + earthAge + ". </p><p> Your Mercury age is " + mercuryAge + ". </p><p> Your Venus age is " + venusAge +". </p><p> Your Mars age is " + marsAge +". </p><p> Your Jupiter age is " + jupiterAge + ". </p>")
+    console.log(earthAge);
   });
 });
