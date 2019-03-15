@@ -5,6 +5,7 @@ import {venus} from './../src/backEnd.js';
 import {mars} from './../src/backEnd.js';
 import {jupiter} from './../src/backEnd.js';
 import {genderLife} from './../src/backEnd.js';
+import {answer} from './../src/backEnd.js';
 
 describe('UserAge', function() {
   it('should set users birthday', function() {
@@ -52,5 +53,11 @@ describe('UserAge', function() {
     let gender = 'male';
     let genderEx = genderLife(gender);
     expect(genderEx).toEqual(68);
+  });
+
+  it('should give years left to live or years lived after life expectancy', function() {
+    let age = 23;
+    let answerAge = answer(23)
+    expect(answerAge).toEqual("You have 23 years left to live.")
   });
 });

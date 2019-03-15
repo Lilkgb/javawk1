@@ -50,3 +50,12 @@ export function genderLife(gender) {
   }
   else {return console.log("error");}
 }
+
+export function answer(life) {
+  if (life >= 0) {
+   return "You have " + life + " years left to live.";
+  }
+  else {
+    return "You have lived " + life + " years past the life expectancy!"
+  }
+}

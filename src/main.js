@@ -27,6 +27,12 @@ $(document).ready(function() {
     const venusEx = venus(earthEx);
     const marsEx = mars(earthEx);
     const jupiterEx = jupiter(earthEx);
+    let eLeft = earthEx - earthAge;
+    let mLife = mercuryEx - mercuryAge;
+    let vLife = venusEx - venusAge;
+    let marsLife = marsEx - marsAge;
+    let jLife = jupiterEx - jupiterAge;
+    console.log(eLeft);
     $(".info").append("<p> Your earth age is " + earthAge + ". </p><p> Your Mercury age is " + mercuryAge + ". </p><p> Your Venus age is " + venusAge +". </p><p> Your Mars age is " + marsAge +". </p><p> Your Jupiter age is " + jupiterAge + ". </p>")
   });
 });
