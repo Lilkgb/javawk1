@@ -6,6 +6,7 @@ import {mercury} from './../src/backEnd.js';
 import {venus} from './../src/backEnd.js';
 import {mars} from './../src/backEnd.js';
 import {jupiter} from './../src/backEnd.js';
+import {gender} from './../src/backEnd.js';
 
 $(document).ready(function() {
   $(".form").submit(function(event) {
@@ -21,7 +22,8 @@ $(document).ready(function() {
     const marsAge = mars(earthAge);
     const jupiterAge = jupiter(earthAge);
     let gender = $('input[name="gender"]:checked').val();
-    console.log(gender);
+    let earthEx = gender(gender, earthAge);
+    console.log(earthEx);
     $(".info").append("<p> Your earth age is " + earthAge + ". </p><p> Your Mercury age is " + mercuryAge + ". </p><p> Your Venus age is " + venusAge +". </p><p> Your Mars age is " + marsAge +". </p><p> Your Jupiter age is " + jupiterAge + ". </p>")
     console.log(earthAge);
   });

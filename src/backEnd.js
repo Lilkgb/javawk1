@@ -37,3 +37,19 @@ export function jupiter(age) {
   let roundAge = Math.round(newAge)
   return roundAge;
 }
+
+export function gender(gender) {
+  if(gender === 'male') {
+    let life = 68 - age;
+    return life;
+  }
+  else if(gender === 'female') {
+    let life = 72 - age;
+    return life;
+  }
+  else if(gender === 'other') {
+    let life = 70 - age;
+    return life;
+  }
+  else {}
+}
