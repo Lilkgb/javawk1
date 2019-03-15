@@ -4,6 +4,7 @@ import {mercury} from './../src/backEnd.js';
 import {venus} from './../src/backEnd.js';
 import {mars} from './../src/backEnd.js';
 import {jupiter} from './../src/backEnd.js';
+import {genderLife} from './../src/backEnd.js';
 
 describe('UserAge', function() {
   it('should set users birthday', function() {
@@ -45,5 +46,11 @@ describe('UserAge', function() {
     let age = 23;
     let jupiterAge = jupiter(age);
     expect (jupiterAge).toEqual(273);
+  });
+
+  it('should set life expectancy set from gender selection', function() {
+    let gender = 'male';
+    let genderEx = genderLife(gender);
+    expect(genderEx).toEqual(68);
   });
 });

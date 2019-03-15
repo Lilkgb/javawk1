@@ -38,18 +38,15 @@ export function jupiter(age) {
   return roundAge;
 }
 
-export function gender(gender) {
+export function genderLife(gender) {
   if(gender === 'male') {
-    let life = 68 - age;
-    return life;
+    return 68
   }
   else if(gender === 'female') {
-    let life = 72 - age;
-    return life;
+    return 72;
   }
   else if(gender === 'other') {
-    let life = 70 - age;
-    return life;
+    return 70;
   }
-  else {}
+  else {return console.log("error");}
 }
