@@ -3,6 +3,7 @@ import {dateString} from './../src/backEnd.js';
 import {getAge} from './../src/backEnd.js';
 import {mercury} from './../src/backEnd.js';
 import {venus} from './../src/backEnd.js';
+import {mars} from './../src/backEnd.js';
 
 describe('UserAge', function() {
   it('should set users birthday', function() {
@@ -26,13 +27,20 @@ describe('UserAge', function() {
     let age = 23;
     let mercuryAge = mercury(age);
     console.log(mercuryAge);
-    expect(mercuryAge).toEqual(5.52);
+    expect(mercuryAge).toEqual(6);
   });
 
   it('should set Venus age', function() {
     let age = 23;
     let venusAge = venus(age);
     console.log(venusAge);
-    expect(venusAge).toEqual(14.26);
+    expect(venusAge).toEqual(14);
+  });
+
+  it('should set Mars age', function() {
+    let age = 23;
+    let marsAge = mars(age);
+    console.log(marsAge);
+    expect (marsAge).toEqual(43);
   });
 });
