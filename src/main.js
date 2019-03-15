@@ -8,10 +8,13 @@ import {mars} from './../src/backEnd.js';
 import {jupiter} from './../src/backEnd.js';
 
 $(document).ready(function() {
-  let month = 'may';
-  let day = 31;
-  let year = 1995;
-  let newDate = dateString(month,day,year);
-  let age = getAge(newDate);
-  console.log(age);
+  $(".form").submit(function(event) {
+    event.preventDefault();
+    let month = 'may';
+    let day = 31;
+    let year = 1995;
+    let newDate = dateString(month,day,year);
+    let age = getAge(newDate);
+    console.log(age);
+  });
 });
