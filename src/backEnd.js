@@ -18,3 +18,18 @@ export function mercury(age) {
   let newAge = age * 0.24;
   return newAge;
 }
+
+export function venus(age) {
+  let newAge = age * 0.62;
+  return newAge;
+}
+
+export function mars(age) {
+  let newAge = age * 1.88;
+  return newAge;
+}
+
+export function jupiter(age) {
+  let newAge = age * 11.86;
+  return newAge;
+}

@@ -2,6 +2,7 @@ import { UserAge } from './../src/backEnd.js';
 import {dateString} from './../src/backEnd.js';
 import {getAge} from './../src/backEnd.js';
 import {mercury} from './../src/backEnd.js';
+import {venus} from './../src/backEnd.js';
 
 describe('UserAge', function() {
   it('should set users birthday', function() {
@@ -26,5 +27,12 @@ describe('UserAge', function() {
     let mercuryAge = mercury(age);
     console.log(mercuryAge);
     expect(mercuryAge).toEqual(5.52);
+  });
+
+  it('should set Venus age', function() {
+    let age = 23;
+    let venusAge = venus(age);
+    console.log(venusAge);
+    expect(venusAge).toEqual(14.26);
   });
 });
