@@ -13,3 +13,8 @@ export function getAge(dateString) {
     }
   return age;
 }
+
+export function mercury(age) {
+  let newAge = age * 0.24;
+  return newAge;
+}
