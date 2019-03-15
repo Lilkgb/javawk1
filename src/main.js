@@ -1,7 +1,11 @@
 import $ from 'jquery';
 import './input.scss';
 import {dateString} from './backEnd.js';
-import {getAge} from './backEnd.js';
+import {getAge} from './../src/backEnd.js';
+import {mercury} from './../src/backEnd.js';
+import {venus} from './../src/backEnd.js';
+import {mars} from './../src/backEnd.js';
+import {jupiter} from './../src/backEnd.js';
 
 $(document).ready(function() {
   let month = 'may';
