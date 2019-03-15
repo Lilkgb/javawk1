@@ -20,6 +20,8 @@ $(document).ready(function() {
     const venusAge = venus(earthAge);
     const marsAge = mars(earthAge);
     const jupiterAge = jupiter(earthAge);
+    let gender = $('input[name="gender"]:checked').val();
+    console.log(gender);
     $(".info").append("<p> Your earth age is " + earthAge + ". </p><p> Your Mercury age is " + mercuryAge + ". </p><p> Your Venus age is " + venusAge +". </p><p> Your Mars age is " + marsAge +". </p><p> Your Jupiter age is " + jupiterAge + ". </p>")
     console.log(earthAge);
   });
