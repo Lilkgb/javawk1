@@ -1,4 +1,3 @@
-import { UserAge } from './../src/backEnd.js';
 import {dateString} from './../src/backEnd.js';
 import {getAge} from './../src/backEnd.js';
 import {mercury} from './../src/backEnd.js';
