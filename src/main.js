@@ -22,9 +22,11 @@ $(document).ready(function() {
     const marsAge = mars(earthAge);
     const jupiterAge = jupiter(earthAge);
     let gender = $('input[name="gender"]:checked').val();
-    let earthEx = genderLife(gender);
-    console.log(earthEx);
+    const earthEx = genderLife(gender);
+    const mercuryEx = mercury(earthEx);
+    const venusEx = venus(earthEx);
+    const marsEx = mars(earthEx);
+    const jupiterEx = jupiter(earthEx);
     $(".info").append("<p> Your earth age is " + earthAge + ". </p><p> Your Mercury age is " + mercuryAge + ". </p><p> Your Venus age is " + venusAge +". </p><p> Your Mars age is " + marsAge +". </p><p> Your Jupiter age is " + jupiterAge + ". </p>")
-    console.log(earthAge);
   });
 });
