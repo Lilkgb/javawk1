@@ -1,76 +1,49 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+
   entry: './src/main.js',
   output: {
-    filename: 'bundle.js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
+
   devtool: 'eval-source-map',
   devServer: {
     contentBase: './dist'
   },
-  plugins: [
-    new UglifyJsPlugin({sourceMap: true}),
-    new HtmlWebpackPlugin({
-      title: 'javawk1',
-      template: './src/index.html',
-      inject: 'body'
-    })
-  ],
+
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          'css-loader'
+            "style-loader",
+            "css-loader",
         ]
       },
 
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
+            "style-loader",
+            "css-loader",
+            "sass-loader"
         ]
       },
 
       {
-        test: /\.js$/,
-        exclude: [
-          /node_modules/,
-          /spec/
-        ],
-        loader: "eslint-loader"
-      },
-
-      {
-        test: /\.(gif|png|jpe?g)$/,
+        test: /\.(gif|png|jpe?g|svg)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'src/img/'
+              outputPath: 'assets/images/'
             }
           }
         ]
-      },
-
-      {
-        test: /\.js$/,
-        exclude: [
-          /node_modules/,
-          /spec/
-        ],
-        loader: "babel-loader",
-        options: {
-          presets: ['es2015']
-        }
       },
 
       {
@@ -78,7 +51,23 @@ module.exports = {
         use: [
           'html-loader'
         ]
-      }
+      },
+
     ]
-  }
+  },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/index.html',
+      filename: 'index.html',
+      minify: {
+      removeComments: true,
+      collapseWhitespace: true
+    }
+
+  }),
+
+  ]
+
 };
