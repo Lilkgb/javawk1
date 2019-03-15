@@ -1,5 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 
 module.exports = {
 
@@ -53,10 +56,21 @@ module.exports = {
         ]
       },
 
+      {
+        test: /\.js$/,
+        exclude: [
+          /node_modules/,
+          /spec/,
+        ],
+        loader: "eslint-loader"
+      }
+
     ]
   },
 
   plugins: [
+    new UglifyJsPlugin(),
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       inject: 'body',
       template: './src/index.html',
