@@ -4,6 +4,7 @@ import {getAge} from './../src/backEnd.js';
 import {mercury} from './../src/backEnd.js';
 import {venus} from './../src/backEnd.js';
 import {mars} from './../src/backEnd.js';
+import {jupiter} from './../src/backEnd.js';
 
 describe('UserAge', function() {
   it('should set users birthday', function() {
@@ -26,21 +27,24 @@ describe('UserAge', function() {
   it('should set Mercury age', function() {
     let age = 23;
     let mercuryAge = mercury(age);
-    console.log(mercuryAge);
     expect(mercuryAge).toEqual(6);
   });
 
   it('should set Venus age', function() {
     let age = 23;
     let venusAge = venus(age);
-    console.log(venusAge);
     expect(venusAge).toEqual(14);
   });
 
   it('should set Mars age', function() {
     let age = 23;
     let marsAge = mars(age);
-    console.log(marsAge);
     expect (marsAge).toEqual(43);
+  });
+
+  it('should set Jupiter age', function() {
+    let age = 23;
+    let jupiterAge = jupiter(age);
+    expect (jupiterAge).toEqual(273);
   });
 });
