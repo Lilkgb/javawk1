@@ -1,12 +1,12 @@
 import { UserAge } from './../src/backEnd.js';
+import {dateString} from './../src/backEnd.js';
 
 describe('UserAge', function() {
-  it('should set users birthday', function () {
-    let user = new UserAge();
-    user.setMonth('May')
-    user.setDay(31);
-    user.setYear(1995);
-    console.log(user);
-    expect(user).toEqual('May', 31, 1995);
+  it('should set users birthday', function() {
+    let month = "may";
+    let day = 31;
+    let year = 1995;
+    let newDate = dateString(month,day,year);
+    expect(newDate).toEqual("may 31, 1995")
   });
 });
