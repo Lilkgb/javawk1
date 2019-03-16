@@ -11,12 +11,18 @@ export function getAge(dateString) {
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
       age--;
     }
+    else {
+      return "invalid";
+    }
   return age;
 }
 
 export function mercury(age) {
   let newAge = age / 0.24;
   let roundAge = Math.round(newAge)
+  if (age === "invalid") {
+    return "invalid"
+  }
   return roundAge;
 }
 
