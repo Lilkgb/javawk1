@@ -5,18 +5,26 @@
     <title>AGE</title>
   </head>
   <body>
-    <h1>Whats your age?</h1>
-    <h3>Enter Your Birthday</h3>
-    <form class="form" action="index.html" method="post">
-      <input type="text" id="month" name="month" placeholder="Month" required>
-      <input type="number" id="day" name="day" placeholder="Day" required>
-      <input type="number" id="year" name="year" placeholder="Year" required>
-      <h5>Gender</h5>
-      <input type="radio" name="gender" value="male" checked>Male <br>
-      <input type="radio" name="gender" value="female">Female <br>
-      <input type="radio" name="gender" value="other">Other <br>
-      <button type="submit" name="button">Submit</button>
-    </form>
-    <div class="info"></div>
+    <div class="all">
+      <h1>Whats your age?</h1>
+      <h3>Enter Your Birthday</h3>
+      <form class="form" action="index.html" method="post">
+        <input type="text" id="month" name="month" placeholder="Month" required>
+        <input type="number" id="day" name="day" placeholder="Day" required>
+        <input type="number" id="year" name="year" placeholder="Year" required>
+        <h5>Gender</h5>
+        <div class="male">
+          <input type="radio" name="gender" value="male" checked>Male
+        </div>
+        <div class="female">
+          <input type="radio" name="gender" value="female">Female
+        </div>
+        <div class="other">
+          <input type="radio" name="gender" value="other">Other <br>
+        </div>
+        <button type="submit" name="button">Submit</button>
+      </form>
+      <div class="info"></div>
+    </div>
   </body>
 </html>

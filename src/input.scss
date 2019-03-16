@@ -1,0 +1,46 @@
+body {
+  background-image: url(img/source.gif);
+  background-size: cover;
+  display: grid;
+}
+
+.all {
+  justify-self: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: grid;
+  grid-gap: 5px;
+  padding: 40px;
+  border-radius: 25px;
+  .form {
+    display: grid;
+  }
+  h1 {
+    justify-self: center;
+  }
+  h3 {
+    justify-self: center;
+  }
+  h5 {
+    margin: 2px;
+    justify-self: center;
+  }
+  .male {
+    justify-self: center;
+  }
+  .female {
+    justify-self: center;
+  }
+  .other {
+    justify-self: center;
+  }
+  input {
+    justify-self: center;
+    margin-bottom: 10px;
+  }
+  button {
+    justify-self: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
