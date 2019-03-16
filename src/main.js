@@ -19,9 +19,9 @@ $(document).ready(function() {
     let year = $("#year").val();
     let newDate = dateString(month,day,year);
     const earthAge = getAge(newDate);
-    console.log(earthAge);
     if (earthAge === "invalid") {
       $(".info").append("<p>You have entered a invalid birthday. Please try again.");
+      $(".info").show('slow');
       return;
     }
     const mercuryAge = mercury(earthAge);
