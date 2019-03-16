@@ -10,6 +10,7 @@ import {genderLife} from './../src/backEnd.js';
 import {answer} from './../src/backEnd.js';
 
 $(document).ready(function() {
+  $(".info").hide();
   $(".form").submit(function(event) {
     event.preventDefault();
     $(".info").text('');
@@ -34,6 +35,11 @@ $(document).ready(function() {
     let marsLife = answer(marsEx - marsAge);
     let jLife = answer(jupiterEx - jupiterAge);
     console.log(eLeft)
-    $(".info").append("<p> Your Earth age is " + earthAge + ". " + eLeft + " </p><p> Your Mercury age is " + mercuryAge + ". " + mLife + " </p><p> Your Venus age is " + venusAge + ". " + vLife + " </p><p> Your Mars age is " + marsAge + ". " + marsLife + " </p><p> Your Jupiter age is " + jupiterAge + ". " + jLife + " </p>")
+    $(".info").append("<h5 class='hide'>Hide</h5><p> Your Earth age is " + earthAge + ". " + eLeft + " </p><p> Your Mercury age is " + mercuryAge + ". " + mLife + " </p><p> Your Venus age is " + venusAge + ". " + vLife + " </p><p> Your Mars age is " + marsAge + ". " + marsLife + " </p><p> Your Jupiter age is " + jupiterAge + ". " + jLife + " </p>");
+    $(".info").show('slow');
+    $(".hide").click(function(event) {
+      event.preventDefault();
+      $(".info").hide('slow');
+    });
   });
 });
