@@ -15,25 +15,25 @@ export function getAge(dateString) {
 }
 
 export function mercury(age) {
-  let newAge = age * 0.24;
+  let newAge = age / 0.24;
   let roundAge = Math.round(newAge)
   return roundAge;
 }
 
 export function venus(age) {
-  let newAge = age * 0.62;
+  let newAge = age / 0.62;
   let roundAge = Math.round(newAge)
   return roundAge;
 }
 
 export function mars(age) {
-  let newAge = age * 1.88;
+  let newAge = age / 1.88;
   let roundAge = Math.round(newAge)
   return roundAge;
 }
 
 export function jupiter(age) {
-  let newAge = age * 11.86;
+  let newAge = age / 11.86;
   let roundAge = Math.round(newAge)
   return roundAge;
 }
