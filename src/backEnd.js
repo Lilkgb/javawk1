@@ -53,9 +53,9 @@ export function genderLife(gender) {
 
 export function answer(life) {
   if (life >= 0) {
-   return "You have " + life + " years left to live.";
+   return "You have " + life + " years left to live on this planet!";
   }
-  else {
-    return "You have lived " + life + " years past the life expectancy!"
+  else if (life < 0){
+    return "You have lived " + life + " years past the life expectancy on this planet!"
   }
 }
