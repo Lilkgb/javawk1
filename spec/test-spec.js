@@ -28,25 +28,25 @@ describe('UserAge', function() {
   it('should set Mercury age', function() {
     let age = 23;
     let mercuryAge = mercury(age);
-    expect(mercuryAge).toEqual(6);
+    expect(mercuryAge).toEqual(96);
   });
 
   it('should set Venus age', function() {
     let age = 23;
     let venusAge = venus(age);
-    expect(venusAge).toEqual(14);
+    expect(venusAge).toEqual(37);
   });
 
   it('should set Mars age', function() {
     let age = 23;
     let marsAge = mars(age);
-    expect (marsAge).toEqual(43);
+    expect (marsAge).toEqual(12);
   });
 
   it('should set Jupiter age', function() {
     let age = 23;
     let jupiterAge = jupiter(age);
-    expect (jupiterAge).toEqual(273);
+    expect (jupiterAge).toEqual(2);
   });
 
   it('should set life expectancy set from gender selection', function() {
@@ -58,6 +58,6 @@ describe('UserAge', function() {
   it('should give years left to live or years lived after life expectancy', function() {
     let age = 23;
     let answerAge = answer(23)
-    expect(answerAge).toEqual("You have 23 years left to live.")
+    expect(answerAge).toEqual("You have 23 years left to live on this planet!")
   });
 });

@@ -6,13 +6,13 @@ export function dateString(month,day,year) {
 export function getAge(dateString) {
     var today = new Date();
     var birthDate = new Date(dateString);
+    if (birthDate == "Invalid Date") {
+      return "Invalid"
+    }
     var age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
       age--;
-    }
-    else {
-      return "invalid";
     }
   return age;
 }
@@ -54,7 +54,7 @@ export function genderLife(gender) {
   else if(gender === 'other') {
     return 70;
   }
-  else {return console.log("error");}
+  else {return "error";}
 }
 
 export function answer(life) {

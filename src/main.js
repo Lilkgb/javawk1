@@ -19,7 +19,7 @@ $(document).ready(function() {
     let year = $("#year").val();
     let newDate = dateString(month,day,year);
     const earthAge = getAge(newDate);
-    if (earthAge === "invalid") {
+    if (earthAge == "Invalid") {
       $(".info").append("<p>You have entered a invalid birthday. Please try again.");
       $(".info").show('slow');
       return;
@@ -39,7 +39,6 @@ $(document).ready(function() {
     let vLife = answer(venusEx - venusAge);
     let marsLife = answer(marsEx - marsAge);
     let jLife = answer(jupiterEx - jupiterAge);
-    console.log(eLeft)
     $(".info").append("<h5 class='hide'>Hide</h5><p> Your Earth age is " + earthAge + ". " + eLeft + " </p><p> Your Mercury age is " + mercuryAge + ". " + mLife + " </p><p> Your Venus age is " + venusAge + ". " + vLife + " </p><p> Your Mars age is " + marsAge + ". " + marsLife + " </p><p> Your Jupiter age is " + jupiterAge + ". " + jLife + " </p>");
     $(".info").show('slow');
     $(".hide").click(function(event) {
